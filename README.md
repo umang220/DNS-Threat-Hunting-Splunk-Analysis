@@ -1,7 +1,7 @@
 # DNS Threat Hunting with Splunk SIEM: Analyzing DNS Logs for Security Insights
 
 [![GitHub stars](https://img.shields.io/github/stars/umang220/DNS-Threat-Hunting-Splunk-Analysis)](https://github.com/umang220/DNS-Threat-Hunting-Splunk-Analysis)
-[![GitHub license](https://img.shields.io/github/license/tumhara-username/DNS-Threat-Hunting-Splunk-Analysis)](https://github.com/tumhara-username/DNS-Threat-Hunting-Splunk-Analysis/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/umang220/DNS-Threat-Hunting-Splunk-Analysis)](https://github.com/umang220/DNS-Threat-Hunting-Splunk-Analysis/blob/main/LICENSE)
 
 ## 🚀 Project Overview
 This project demonstrates how to ingest, analyze, and visualize DNS log files using **Splunk SIEM** for threat hunting. Key focus: Detecting anomalies like suspicious domains, high-volume queries, tunneling, DGA (Domain Generation Algorithms), and off-hours activity.
