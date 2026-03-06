@@ -33,3 +33,34 @@ Here are the core searches I built:
 #### Top Queried Domains (High-Volume Indicator)
 ```spl
 index=dns_logs sourcetype=dns | stats count by query | sort - count | head 10 | rename count as "Query_Volume"
+
+#### Long Subdomains (DNS Tunneling Detection)
+```spl
+index=dns_logs sourcetype=dns 
+| eval length=len(query) 
+| where length > 50 
+| stats count by query, src_ip 
+| sort -count
+
+#### Off-Hours Query Spikes (Unusual Timing Detection)
+```spl
+index=dns_logs sourcetype=dns 
+| eval hour=strftime(_time, "%H") 
+| where hour < "06" OR hour > "22" 
+| timechart span=1h count by src_ip
+
+#### Rare / Unique Domains per IP (DGA / Beaconing Detection)
+```spl
+index=dns_logs sourcetype=dns 
+| stats dc(query) as unique_domains by src_ip 
+| where unique_domains > 100 
+| sort -unique_domains
+
+### 3. Dashboard Creation
+Built a custom Splunk dashboard for DNS threat monitoring:
+- Panels included: Top domains (bar chart), Query volume over time (line chart), Off-hours spikes, Long subdomains table, Top talkers by IP.
+- Used above SPL queries as data sources for panels.
+- Dashboard helps quick visual threat hunting.
+
+![DNS Threat Hunting Dashboard](screenshots/dashboard.png)
+*(Screenshot of the full dashboard – upload your Splunk export soon)*
