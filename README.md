@@ -1,3 +1,4 @@
+<img width="1919" height="961" alt="splunk-dnslogs-search-example" src="https://github.com/user-attachments/assets/f98a344c-ffd2-4a94-a4b7-feeb12226509" />
 # DNS Threat Hunting with Splunk SIEM: Analyzing DNS Logs for Security Insights
 
 [![GitHub stars](https://img.shields.io/github/stars/umang220/DNS-Threat-Hunting-Splunk-Analysis)](https://github.com/umang220/DNS-Threat-Hunting-Splunk-Analysis)
