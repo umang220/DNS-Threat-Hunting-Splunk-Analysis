@@ -1,0 +1,5 @@
+#### Off-Hours Query Spikes (Unusual Timing Detection)
+index=dns_logs sourcetype=dns 
+| eval hour=strftime(_time, "%H") 
+| where hour < "06" OR hour > "22" 
+| timechart span=1h count by src_ip
