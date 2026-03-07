@@ -1,0 +1,6 @@
+#### Long Subdomains (DNS Tunneling Detection)
+index=dns_logs sourcetype=dns 
+| eval length=len(query) 
+| where length > 50 
+| stats count by query, src_ip 
+| sort -count
