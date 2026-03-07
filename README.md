@@ -62,4 +62,5 @@ Built a custom Splunk dashboard for DNS threat monitoring:
 ## Example: Splunk DNS Search Output
 
 ![Splunk DNS Logs Search Example](images/splunk-dnslogs-search-example.png)
+![image alt](https://github.com/umang220/DNS-Threat-Hunting-Splunk-Analysis/blob/f6fd592d006fc97d64f2ab8af9f824efd4141829/images/splunk-dnslogs-search-example.png)
 *Example of Splunk search result showing DNS logs analysis.*
