@@ -28,8 +28,6 @@ This project demonstrates how to ingest, analyze, and visualize DNS log files us
 ### 2. Key SPL Queries
 Here are the core searches I built:
 
-<image-card alt="Splunk DNS Logs Search Example" src="images/splunk-dnslogs-search-example.png" /></image-card>
-
 #### Top Queried Domains (High-Volume Indicator)
 ```spl
 index=dns_logs sourcetype=dns | stats count by query | sort - count | head 10 | rename count as "Query_Volume"
@@ -61,7 +59,6 @@ Built a custom Splunk dashboard for DNS threat monitoring:
 - Panels included: Top domains (bar chart), Query volume over time (line chart), Off-hours spikes, Long subdomains table, Top talkers by IP.
 - Used above SPL queries as data sources for panels.
 - Dashboard helps quick visual threat hunting.
+![Splunk DNS Logs Search Example](images/splunk-dnslogs-search-example.png)
 
-<img width="1919" height="961" alt="splunk-dnslogs-search-example" src="https://github.com/user-attachments/assets/f98a344c-ffd2-4a94-a4b7-feeb12226509" />
-
-*Example of a Splunk search result panel (top queried domains) from the DNS logs dashboard. This shows real events from indexed DNS logs.*
+*Example of Splunk search result showing top queried domains from the DNS logs dashboard. This panel uses real indexed events for threat hunting visualization.*
