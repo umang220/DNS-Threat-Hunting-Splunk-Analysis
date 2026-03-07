@@ -1,0 +1,6 @@
+# Top Queried Domains - High Volume Indicator
+index=dns_logs sourcetype=dns 
+| stats count by query 
+| sort -count 
+| head 10 
+| rename count as "Query_Volume"
