@@ -33,7 +33,6 @@ Here are the core searches I built:
 index=dns_logs sourcetype=dns | stats count by query | sort - count | head 10 | rename count as "Query_Volume"
 
 #### Long Subdomains (DNS Tunneling Detection)
-```spl
 index=dns_logs sourcetype=dns 
 | eval length=len(query) 
 | where length > 50 
@@ -41,14 +40,12 @@ index=dns_logs sourcetype=dns
 | sort -count
 
 #### Off-Hours Query Spikes (Unusual Timing Detection)
-```spl
 index=dns_logs sourcetype=dns 
 | eval hour=strftime(_time, "%H") 
 | where hour < "06" OR hour > "22" 
 | timechart span=1h count by src_ip
 
 #### Rare / Unique Domains per IP (DGA / Beaconing Detection)
-```spl
 index=dns_logs sourcetype=dns 
 | stats dc(query) as unique_domains by src_ip 
 | where unique_domains > 100 
