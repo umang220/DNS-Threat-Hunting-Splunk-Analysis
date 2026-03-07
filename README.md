@@ -1,6 +1,3 @@
-<img width="1919" height="961" alt="splunk-dnslogs-search-example" src="https://github.com/user-attachments/assets/f98a344c-ffd2-4a94-a4b7-feeb12226509" />
-# DNS Threat Hunting with Splunk SIEM: Analyzing DNS Logs for Security Insights
-
 [![GitHub stars](https://img.shields.io/github/stars/umang220/DNS-Threat-Hunting-Splunk-Analysis)](https://github.com/umang220/DNS-Threat-Hunting-Splunk-Analysis)
 [![GitHub license](https://img.shields.io/github/license/umang220/DNS-Threat-Hunting-Splunk-Analysis)](https://github.com/umang220/DNS-Threat-Hunting-Splunk-Analysis/blob/main/LICENSE)
 
@@ -63,6 +60,6 @@ Built a custom Splunk dashboard for DNS threat monitoring:
 - Used above SPL queries as data sources for panels.
 - Dashboard helps quick visual threat hunting.
 
-<image-card alt="Splunk DNS Logs Search Example" src="images/splunk-dnslogs-search-example.png" ></image-card>
+<img width="1919" height="961" alt="splunk-dnslogs-search-example" src="https://github.com/user-attachments/assets/f98a344c-ffd2-4a94-a4b7-feeb12226509" />
 
 *Example of a Splunk search result panel (top queried domains) from the DNS logs dashboard. This shows real events from indexed DNS logs.*
