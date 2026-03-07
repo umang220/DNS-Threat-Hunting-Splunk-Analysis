@@ -1,0 +1,5 @@
+#### Rare / Unique Domains per IP (DGA / Beaconing Detection)
+index=dns_logs sourcetype=dns 
+| stats dc(query) as unique_domains by src_ip 
+| where unique_domains > 100 
+| sort -unique_domains
