@@ -27,7 +27,7 @@ This project demonstrates how to ingest, analyze, and visualize DNS log files us
 
 ### 2. Key SPL Queries
 Here are the core searches I built:
-
+![image alt](https://github.com/umang220/DNS-Threat-Hunting-Splunk-Analysis/blob/f6fd592d006fc97d64f2ab8af9f824efd4141829/images/splunk-dnslogs-search-example.png)
 #### Top Queried Domains (High-Volume Indicator)
 ```spl
 index=dns_logs sourcetype=dns | stats count by query | sort - count | head 10 | rename count as "Query_Volume"
