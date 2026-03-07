@@ -64,5 +64,4 @@ Built a custom Splunk dashboard for DNS threat monitoring:
 
 <image-card alt="Splunk DNS Logs Search Example" src="images/splunk-dnslogs-search-example.png" ></image-card>
 
-*Example of a Splunk search result panel (top queried domains) from the DNS logs dashboard.*
-
+*Example of a Splunk search result panel (top queried domains) from the DNS logs dashboard. This shows real events from indexed DNS logs.*
