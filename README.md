@@ -29,11 +29,11 @@ This project demonstrates how to ingest, analyze, and visualize DNS log files us
 Here are the core searches I built:
 
 #### Top Queried Domains (High-Volume Indicator)
-'''spl
+```spl
 index=dns_logs sourcetype=dns | stats count by query | sort - count | head 10 | rename count as "Query_Volume"
 
 #### Long Subdomains (DNS Tunneling Detection)
-'''spl
+```spl
 index=dns_logs sourcetype=dns 
 | eval length=len(query) 
 | where length > 50 
@@ -41,18 +41,19 @@ index=dns_logs sourcetype=dns
 | sort -count
 
 #### Off-Hours Query Spikes (Unusual Timing Detection)
-'''spl
+```spl
 index=dns_logs sourcetype=dns 
 | eval hour=strftime(_time, "%H") 
 | where hour < "06" OR hour > "22" 
 | timechart span=1h count by src_ip
 
 #### Rare / Unique Domains per IP (DGA / Beaconing Detection)
-'''spl
+```spl
 index=dns_logs sourcetype=dns 
 | stats dc(query) as unique_domains by src_ip 
 | where unique_domains > 100 
 | sort -unique_domains
+```
 
 ### 3. Dashboard Creation
 Built a custom Splunk dashboard for DNS threat monitoring:
