@@ -59,6 +59,7 @@ Built a custom Splunk dashboard for DNS threat monitoring:
 - Panels included: Top domains (bar chart), Query volume over time (line chart), Off-hours spikes, Long subdomains table, Top talkers by IP.
 - Used above SPL queries as data sources for panels.
 - Dashboard helps quick visual threat hunting.
-![Splunk DNS Logs Search Example](images/splunk-dnslogs-search-example.png)
 
-*Example of Splunk search result showing top queried domains from the DNS logs dashboard. This panel uses real indexed events for threat hunting visualization.*
+<image-card alt="Splunk DNS Logs Search Example" src="images/splunk-dnslogs-search-example.png" ></image-card>
+
+*Example of Splunk search result showing top queried domains from the DNS logs dashboard.*
