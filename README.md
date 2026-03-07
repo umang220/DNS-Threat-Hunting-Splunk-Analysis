@@ -28,6 +28,8 @@ This project demonstrates how to ingest, analyze, and visualize DNS log files us
 ### 2. Key SPL Queries
 Here are the core searches I built:
 
+<image-card alt="Splunk DNS Logs Search Example" src="images/splunk-dnslogs-search-example.png" /></image-card>
+
 #### Top Queried Domains (High-Volume Indicator)
 ```spl
 index=dns_logs sourcetype=dns | stats count by query | sort - count | head 10 | rename count as "Query_Volume"
