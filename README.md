@@ -61,6 +61,5 @@ Built a custom Splunk dashboard for DNS threat monitoring:
 - Dashboard helps quick visual threat hunting.
 ## Example: Splunk DNS Search Output
 
-![Splunk DNS Logs Search Example](https://raw.githubusercontent.com/umang220/DNS-Threat-Hunting-Splunk-Analysis/main/images/splunk-dnslogs-search-example.png)
-
+![Splunk DNS Logs Search Example](images/splunk-dnslogs-search-example.png)
 *Example of Splunk search result showing DNS logs analysis.*
