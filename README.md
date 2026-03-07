@@ -62,5 +62,5 @@ Built a custom Splunk dashboard for DNS threat monitoring:
 - Used above SPL queries as data sources for panels.
 - Dashboard helps quick visual threat hunting.
 
-![DNS Threat Hunting Dashboard](screenshots/dashboard.png)
+![DNS Threat Hunting Dashboard](images/splunk-dnslogs-search-example.png)
 *(Screenshot of the full dashboard – upload your Splunk export soon)*
