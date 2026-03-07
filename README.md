@@ -27,13 +27,13 @@ This project demonstrates how to ingest, analyze, and visualize DNS log files us
 
 ### 2. Key SPL Queries
 Here are the core searches I built:
-![image alt](https://github.com/umang220/DNS-Threat-Hunting-Splunk-Analysis/blob/f6fd592d006fc97d64f2ab8af9f824efd4141829/images/splunk-dnslogs-search-example.png)
+
 #### Top Queried Domains (High-Volume Indicator)
-```spl
+'''spl
 index=dns_logs sourcetype=dns | stats count by query | sort - count | head 10 | rename count as "Query_Volume"
 
 #### Long Subdomains (DNS Tunneling Detection)
-```spl
+'''spl
 index=dns_logs sourcetype=dns 
 | eval length=len(query) 
 | where length > 50 
@@ -41,14 +41,14 @@ index=dns_logs sourcetype=dns
 | sort -count
 
 #### Off-Hours Query Spikes (Unusual Timing Detection)
-```spl
+'''spl
 index=dns_logs sourcetype=dns 
 | eval hour=strftime(_time, "%H") 
 | where hour < "06" OR hour > "22" 
 | timechart span=1h count by src_ip
 
 #### Rare / Unique Domains per IP (DGA / Beaconing Detection)
-```spl
+'''spl
 index=dns_logs sourcetype=dns 
 | stats dc(query) as unique_domains by src_ip 
 | where unique_domains > 100 
@@ -61,6 +61,5 @@ Built a custom Splunk dashboard for DNS threat monitoring:
 - Dashboard helps quick visual threat hunting.
 ## Example: Splunk DNS Search Output
 
-![Splunk DNS Logs Search Example](images/splunk-dnslogs-search-example.png)
 ![image alt](https://github.com/umang220/DNS-Threat-Hunting-Splunk-Analysis/blob/f6fd592d006fc97d64f2ab8af9f824efd4141829/images/splunk-dnslogs-search-example.png)
 *Example of Splunk search result showing DNS logs analysis.*
