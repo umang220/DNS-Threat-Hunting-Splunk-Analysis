@@ -7,9 +7,6 @@
 ## 🚀 Project Overview
 This project demonstrates how to ingest, analyze, and visualize DNS log files(https://github.com/umang220/DNS-Threat-Hunting-Splunk-Analysis/raw/main/sample%20data/dns.log.gz) using **Splunk SIEM** for threat hunting. Key focus: Detecting anomalies like suspicious domains, high-volume queries, tunneling, DGA (Domain Generation Algorithms), and off-hours activity.
 
-
-[📥 Download Sample DNS Log (dns.log.gz)]
-
 **Why DNS Analysis?** DNS is often the first step in attacks (e.g., C2 communication, data exfiltration). This setup helps SOC analysts identify threats early.
 
 ### 🎯 Objectives
